@@ -1,0 +1,7 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1503
+
+This is mainly used to display log files. The program will unfold all lines except the previous search. Additional search terms can be added and unfolded.
+:SFS --- search fold start
+:SF   ---- additional fold
+:SR   ---- reset
+:SC   ---- count number found
