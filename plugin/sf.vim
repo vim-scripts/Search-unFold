@@ -29,7 +29,9 @@ command -nargs=0 SC  call SC()<CR>
 " e - expand fold
 " 9/6/2001 02:51 initial by Max Ischenko
 " 6/2/2003 23:09 simplification to 1 line by ppa-nsu@mail.ru
-nnoremap <silent> e :exe 'silent! normal! za'.(foldlevel('.')?'':'l')<cr> 
+if !(exists('g:sf_disable_expand_fold') && g:sf_disable_expand_fold==1)
+  nnoremap <silent> e :exe 'silent! normal! za'.(foldlevel('.')?'':'l')<cr> 
+endif
 
 "set nocp vb noerrorbells ic incsearch
 "set foldcolumn=2 
